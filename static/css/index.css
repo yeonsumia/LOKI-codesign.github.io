@@ -181,6 +181,14 @@ body {
     opacity: 1;
 }
 
+.author-block2 {
+    display: inline-block;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+    color: #a4f442;
+    font-weight: bold;
+}
+
 .publication-banner img {
 }
 

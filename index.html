@@ -74,17 +74,17 @@
                             
                         </span>
                     </div>
-                      <div class="is-size-5 publication-authors">
+                      <div class="is-size-6 publication-authors">
                         <span class="author-block">* Equal Contribution</span> 
                         <br>
                         <span class="author-block"><sup>1</sup>University of Washington,</span>
                         <span class="author-block"><sup>2</sup>Seoul National University,</span>
                         <span class="author-block"><sup>3</sup>Allen Institute for AI,</span>
                         <span class="author-block"><sup>4</sup>Kempner Institute at Harvard University</span>
-                        <br>
-                        <span class="author-block2">NeurIPS 2025</span> 
-
-                    </div>
+                      </div>
+                      <div class="is-size-5 publication-authors">
+                            <span class="author-block2">NeurIPS 2025</span> 
+                      </div>
                     <div class="column has-text-centered">
                         <span class="publication-links">
                             <span class="link-block"><a target="_blank" href="https://arxiv.org/pdf/2505.21665" class="external-link button is-normal is-rounded is-light"><span class="icon"><svg class="svg-inline--fa fa-file fa-w-12" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm160-14.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"></path></svg></span><span>Paper</span></a></span>
@@ -107,13 +107,11 @@
         <div class="hero">
             <br>
             <h2 class="subtitle">
-                <strong>LOKI (<u>L</u>ocally <u>O</u>ptimized <u>K</u>inematic <u>I</u>nstantiations)</strong> <img src="./static/images/LOKI_green-old.png" class="no-darkmode-invert" alt="LOKI Logo" style="height: 1em; margin-left: 0.3em;"> is a compute-efficient co-design framework that discovers <strong>diverse</strong>, high-performing robot morphologies (<i>divergent forms</i>) using <strong>shared control policies</strong> (<i>convergent functions</i>) and dynamic local search <a href="#reference" style="color: red;">[1]</a> instead of mutation.
+                <strong>LOKI (<u>L</u>ocally <u>O</u>ptimized <u>K</u>inematic <u>I</u>nstantiations)</strong> <img src="./static/images/LOKI_green-old.png" class="no-darkmode-invert" alt="LOKI Logo" style="height: 1em;"> is a compute-efficient co-design framework that discovers <strong>diverse</strong>, high-performing robot morphologies (<i>divergent forms</i>) using <strong>shared control policies</strong> (<i>convergent functions</i>) and dynamic local search <a href="#reference" style="color: gray;">[1]</a> instead of mutation.
                 <br>
                 <br>
-                The policy reuse allows us to explore $\sim780\times$ more designs using 78% fewer simulation steps and 40% less compute per design (see <a href="#efficiency_comparison" style="color: blue;">Efficiency and Coverage Comparison</a>).
-                <br>
-                <br>
-                Beyond being substantially more efficient, <strong>LOKI</strong> <img src="./static/images/LOKI_green-old.png" class="no-darkmode-invert" alt="LOKI Logo" style="height: 1em; margin-left: 0.3em;"> discovers both genetically and behaviorally diverse high-performing morphologies that effectively generalize across various unseen tasks. (see <a href="#locomotion" style="color: blue;">Qualitative Results</a>).
+                The policy reuse allows us to explore $\sim$780$\times$ more designs using 78% fewer simulation steps and 40% less compute per design (see the <a href="#efficiency_comparison" style="color: blue;"> comparison table</a>).  
+                Beyond being substantially more efficient, <strong>LOKI</strong> <img src="./static/images/LOKI_green-old.png" class="no-darkmode-invert" alt="LOKI Logo" style="height: 1em;"> discovers both genetically and behaviorally diverse high-performing morphologies that effectively generalize across various unseen tasks (see <a href="#locomotion" style="color: blue;">videos</a>).
 
             </h2>
             <img src="./static/images/method_v3.png"
@@ -121,7 +119,7 @@
                  alt="header-image."/>
             <br>
             <h2 class="subtitle">
-                <strong>(A)</strong> UNIMAL <a href="#reference" style="color: red;">[2]</a>, an expressive design space encompassing approximately 10<sup>18</sup> unique morphologies with fewer than 10 limbs, is partitioned into 40 clusters based on morphological similarity in a learned latent space.
+                <strong>(A)</strong> UNIMAL <a href="#reference" style="color: gray;">[2]</a>, an expressive design space encompassing approximately 10<sup>18</sup> unique morphologies with fewer than 10 limbs, is partitioned into 40 clusters based on morphological similarity in a learned latent space.
                 <br>
                 <br>
                 <strong>(B)</strong> A shared control policy is trained within each cluster on a dynamic pool of elite morphologies, for a simple flat-terrain locomotion task. 
@@ -194,10 +192,10 @@
                 <br> -->
                 <h3 class="title is-4" id="simulation_numbers">Evolved Agents for Flat-Terrain Locomotion</h3>
                 <p style="text-align: justify;">
-                    <strong>LOKI</strong> <img src="./static/images/LOKI_green-old.png" class="no-darkmode-invert" alt="LOKI Logo" style="height: 1em; margin-left: 0.3em;"> discovers high-performing morphologies with <strong>diverse locomotion behaviors</strong> (e.g. Spinners, Crawlers, Bipedals, etc.).
-                    <br> 
-                    This is due to localizing the competition within each cluster and having a broader exploration within each cluster (using Dynamic Local Search). (see <a href="#diversity" style="color: blue;">Quality Diversity Metrics</a>)
+                    <strong>LOKI</strong> <img src="./static/images/LOKI_green-old.png" class="no-darkmode-invert" alt="LOKI Logo" style="height: 1em;"> discovers high-performing morphologies with <strong>diverse locomotion behaviors</strong> (e.g. Bipeds, Quadrupeds, Spinners, Crawlers). 
+                    This is due to localizing the competition within each cluster and having a broader exploration within each cluster (using Dynamic Local Search) (see <a href="#diversity" style="color: blue;">Quality-Diversity metrics</a>).
                 </p>
+                
                 <br>
                 <p>
                 <div class="grid-container-one">
@@ -216,9 +214,8 @@
                 <br>
                 <h3 class="title is-4" id="real_world_numbers">Transitioning to Unseen Tasks</h3>
                 <p style="text-align: justify;">
-                    <strong>LOKI</strong> <img src="./static/images/LOKI_green-old.png" class="no-darkmode-invert" alt="LOKI Logo" style="height: 1em; margin-left: 0.3em;"> produces a diverse set of solutions that are better suited for adaptation to various unseen tasks and environments, reducing the need to re-evolve agents for each setting.
-                    The final set of evolved designs are trained on a suite of downstream tasks across three domains: agility (<i>bump</i>, <i>obstacle</i>, <i>exploration</i>), stability (<i>incline</i>), and manipulation (<i>push box incline</i>, <i>manipulation ball</i>). 
-                    (see <a href="#behavior" style="color: blue;">Morphology-Level Task Adaptability</a>).
+                    <strong>LOKI</strong> <img src="./static/images/LOKI_green-old.png" class="no-darkmode-invert" alt="LOKI Logo" style="height: 1em;"> produces a diverse set of solutions that are better suited for adaptation to various unseen tasks and environments, reducing the need to re-evolve agents for each setting.
+                    The final set of evolved designs are trained on a suite of downstream tasks across three domains: agility (<i>bump</i>, <i>obstacle</i>, <i>exploration</i>), stability (<i>incline</i>), and manipulation (<i>push box incline</i>, <i>manipulation ball</i>) (see <a href="#behavior" style="color: blue;">Morphology-level Task Adaptability</a>).
                 </p>
                 <br>
                 <h4 class="title is-4" style="text-align: center;">Bump</h4>
@@ -387,8 +384,6 @@
                     
                 </div>
 
-                
-
             </div>
         </div>
     </div>
@@ -408,19 +403,19 @@
                 </div>
                 
                 <br>
-                <p>
+                <p id="efficiency_comparison">
                     We leverage structural commonalities within the design space by training multi-design policies for clusters of morphologies that share structural and behavioral similarities. These cluster-specific policies serve as surrogate scoring functions, enabling efficient evaluation of a large number of designs within each cluster without retraining, thereby significantly improving <strong>search efficiency</strong>.
                 </p>
                 <br>
-                <div id="efficiency_comparison" style="text-align: center;">
+                <div style="text-align: center;">
                     <img src="./static/images/efficiency_table.png"
                          class="interpolation-image"
                          alt="Efficiency and Coverage Table"
-                         width="75%"/>
+                         width="65%"/>
                   </div>
                 <br>
                 <p>
-                    <strong>LOKI</strong> <img src="./static/images/LOKI_green-old.png" class="no-darkmode-invert" alt="LOKI Logo" style="height: 1em; margin-left: 0.3em;"> explores a much larger design space while requiring significantly fewer simulation steps and less training FLOPs per evaluated design.
+                    <strong>LOKI</strong> <img src="./static/images/LOKI_green-old.png" class="no-darkmode-invert" alt="LOKI Logo" style="height: 1em;"> explores a much larger design space while requiring significantly fewer simulation steps and less training FLOPs per evaluated design.
                 </p>
 
             </div>
@@ -434,7 +429,7 @@
     <div class="container is-max-desktop" style="max-width: 1200px;">
         <div class="columns is-centered">
             <div class="column is-full-width">
-                <h2 class="title is-3 has-text-centered" id="diversity">Diverse High-performing designs <small>(Quality-Diversity Metrics)</small></h2>
+                <h2 class="title is-3 has-text-centered" id="diversity">Diverse High-performing designs <small>(Quality-Diversity metrics)</small></h2>
                 <div style="text-align: center;">
                 <img src="./static/images/diverse_form_updated.png"
                  class="interpolation-image"
@@ -443,9 +438,9 @@
                  </div>
                 <br>
                 <p>
-                    <strong>LOKI</strong> <img src="./static/images/LOKI_green-old.png" class="no-darkmode-invert" alt="LOKI Logo" style="height: 1em; margin-left: 0.3em;"> maintains both <strong>quality</strong> and <strong>diversity</strong>.
-                    It achieves the highest QD-Score <a href="#reference" style="color: red;">[3]</a> among all baselines, demonstrating its ability to find high-performing solutions across a wide range of niches. 
-                    Furthermore, <strong>LOKI</strong> <img src="./static/images/LOKI_green-old.png" class="no-darkmode-invert" alt="LOKI Logo" style="height: 1em; margin-left: 0.3em;"> evolves significantly more <strong>sparse</strong> solutions (measured by the average distance to k-nearest neighbors). 
+                    <strong>LOKI</strong> <img src="./static/images/LOKI_green-old.png" class="no-darkmode-invert" alt="LOKI Logo" style="height: 1em;"> maintains both <strong>quality</strong> and <strong>diversity</strong>.
+                    It achieves the highest QD-Score <a href="#reference" style="color: gray;">[3]</a> among all baselines, demonstrating its ability to find high-performing solutions across a wide range of niches. 
+                    Furthermore, <strong>LOKI</strong> <img src="./static/images/LOKI_green-old.png" class="no-darkmode-invert" alt="LOKI Logo" style="height: 1em;"> evolves significantly more <strong>sparse</strong> solutions (measured by the average distance to k-nearest neighbors). 
                     This is due to using Dynamic Local Search for sampling designs, rather than mutations. 
                 </p>
 
@@ -469,7 +464,7 @@
                 
                 <br>
                 <p>
-                    We evolve diverse morphologies on flat terrain that generalize more effectively to unseen tasks requiring varied skills. DERL <a href="#reference" style="color: red;">[2]</a> morphologies are overfitted to flat terrain and perform best on <i>obstacle (n=50)</i> and <i>incline</i>, which are structurally similar. In contrast, <strong>LOKI</strong> <img src="./static/images/LOKI_green-old.png" class="no-darkmode-invert" alt="LOKI Logo" style="height: 1em; margin-left: 0.3em;"> shows significantly better adaptability on <i>bump</i> (981 $\rightarrow$ 1908), <i>push box incline</i> (1519 $\rightarrow$ 3148), <i>manipulation ball</i> (142 $\rightarrow$ 172) enabled by its morphological diversity (e.g., crawlers, crabs) and the emergence of more complex behaviors (e.g., spinning, rolling).
+                    We evolve diverse morphologies on flat terrain that generalize more effectively to unseen tasks requiring varied skills. DERL <a href="#reference" style="color: gray;">[2]</a> morphologies are overfitted to flat terrain and perform best on <i>obstacle (n=50)</i> and <i>incline</i>, which are structurally similar. In contrast, <strong>LOKI</strong> <img src="./static/images/LOKI_green-old.png" class="no-darkmode-invert" alt="LOKI Logo" style="height: 1em;"> shows significantly better adaptability on <i>bump</i> (981 $\rightarrow$ 1908), <i>push box incline</i> (1519 $\rightarrow$ 3148), <i>manipulation ball</i> (142 $\rightarrow$ 172) enabled by its morphological diversity (e.g., crawlers, crabs) and the emergence of more complex behaviors (e.g., spinning, rolling).
                 </p>
             </div>
         </div>
